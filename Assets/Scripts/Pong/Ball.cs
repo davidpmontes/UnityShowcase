@@ -10,10 +10,15 @@ public class Ball : MonoBehaviour
 	void Start ()
     {
         rb = GetComponent<Rigidbody>();
+        Init();
+   	}
+
+    public void Init()
+    {
         rb.velocity = new Vector3(constantspeed, 0);
-	}
-	
-	void Update ()
+    }
+
+    void Update ()
     {
         rb.velocity = constantspeed * (rb.velocity.normalized);
     }

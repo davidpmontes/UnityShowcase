@@ -2,27 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayState : IState
-{
-    private readonly GameStateMachine stateMachine;
-    private readonly GameAI ai;
+public class PlayState : StateMachineBehaviour {
 
-    public PlayState(GameStateMachine sm)
+	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+	
+	}
+
+	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        stateMachine = sm;
-        ai = sm.Owner.GetComponent<GameAI>();
-    }
+	    
+	}
 
-    public void EnterState(GameObject owner)
-    {
-    }
-
-    public void ExitState(GameObject owner)
-    {
-    }
-
-    public void UpdateState(GameObject owner)
-    {
-
-    }
+	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+	
+	}
 }

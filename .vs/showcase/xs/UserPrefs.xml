@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{1F28F6D2-552C-5C02-A7DA-D07E027DF68E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pong/ReadyState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pong/Ball.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pong/GameStateMachine.cs" Line="18" Column="9" />
-      <File FileName="Assets/Scripts/Pong/GameAI.cs" Line="19" Column="1" />
-      <File FileName="Assets/Scripts/Pong/ReadyState.cs" Line="21" Column="56" />
-      <File FileName="Assets/Scripts/Pong/PlayState.cs" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/Pong/PointState.cs" Line="28" Column="2" />
-      <File FileName="Assets/Scripts/Pong/CountDownState.cs" Line="26" Column="9" />
+      <File FileName="Assets/Scripts/Pong/CanvasController.cs" Line="10" Column="38" />
+      <File FileName="Assets/Scripts/Pong/ReadyState.cs" Line="15" Column="47" />
+      <File FileName="Assets/Scripts/Pong/CountDownScript.cs" Line="34" Column="31" />
+      <File FileName="Assets/Scripts/Pong/GameController.cs" Line="13" Column="29" />
+      <File FileName="Assets/Scripts/Pong/PlayState.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/Pong/Goal.cs" Line="13" Column="65" />
+      <File FileName="Assets/Scripts/Pong/Ball.cs" Line="13" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

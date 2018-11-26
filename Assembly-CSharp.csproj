@@ -63,18 +63,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Pong\Ball.cs" />
     <Compile Include="Assets\Scripts\Pong\BallCollide.cs" />
-    <Compile Include="Assets\Scripts\Pong\CountDownState.cs" />
-    <Compile Include="Assets\Scripts\Pong\GameAI.cs" />
-    <Compile Include="Assets\Scripts\Pong\GameStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Pong\CanvasController.cs" />
+    <Compile Include="Assets\Scripts\Pong\CountDownScript.cs" />
+    <Compile Include="Assets\Scripts\Pong\GameController.cs" />
+    <Compile Include="Assets\Scripts\Pong\Goal.cs" />
     <Compile Include="Assets\Scripts\Pong\IMove.cs" />
-    <Compile Include="Assets\Scripts\Pong\IState.cs" />
     <Compile Include="Assets\Scripts\Pong\ITouchUpdate.cs" />
     <Compile Include="Assets\Scripts\Pong\Manager.cs" />
     <Compile Include="Assets\Scripts\Pong\PlayerInputKeyboard.cs" />
     <Compile Include="Assets\Scripts\Pong\PlayerInputTouch.cs" />
     <Compile Include="Assets\Scripts\Pong\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Pong\PlayState.cs" />
-    <Compile Include="Assets\Scripts\Pong\PointState.cs" />
     <Compile Include="Assets\Scripts\Pong\ReadyState.cs" />
     <Compile Include="Assets\Scripts\Pong\TouchInfo.cs" />
     <Reference Include="UnityEditor.StandardEvents">

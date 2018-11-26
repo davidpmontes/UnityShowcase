@@ -1,42 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ReadyState : IState
+public class ReadyState : StateMachineBehaviour
 {
-    private readonly GameStateMachine stateMachine;
-    private readonly GameAI ai;
-    private bool isStart;
-    public GameObject panel;
+    GameObject manager;
+    CanvasController cc;
+    GameController gc;
 
-    public ReadyState(GameStateMachine sm)
+	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        manager = animator.gameObject;
+        cc = manager.GetComponent<CanvasController>();
+        gc = manager.GetComponent<GameController>();
+
+        gc.GameObjectsDeactivate();
+
+        cc.readyStatePanel.SetActive(true);
+        cc.startButton.SetActive(true);
+        cc.countdownLabel.SetActive(false);
+	}
+
+	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+	}
+
+	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        stateMachine = sm;
-        ai = sm.Owner.GetComponent<GameAI>();
-    }
-
-    public void EnterState(GameObject owner)
-    {
-        panel = ai.canvas.transform.Find("ReadyStatePanel").gameObject;
-        isStart = false;
-        panel.SetActive(true);
-    }
-
-    public void ExitState(GameObject owner)
-    {
-
-    }
-
-    public void UpdateState(GameObject owner)
-    {
-        if (isStart){
-            stateMachine.ChangeState(stateMachine.countdownstate);
-        }
-    }
-
-    public void StartButton()
-    {
-        isStart = true;
+        cc.startButton.SetActive(false);
+        cc.countdownLabel.SetActive(true);
     }
 }
