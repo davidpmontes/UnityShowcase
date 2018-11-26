@@ -8,6 +8,14 @@ public class GameController : MonoBehaviour
     public GameObject p2;
     public GameObject ball;
 
+    public int P1score { get; set; }
+    public int P2score { get; set; }
+
+    private void Start() {
+        P1score = 0;
+        P2score = 0;
+    }
+
     public void GameObjectsDeactivate()
     {
         p1.SetActive(false);
@@ -26,14 +34,4 @@ public class GameController : MonoBehaviour
         p2.SetActive(true);
         ball.SetActive(true);
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

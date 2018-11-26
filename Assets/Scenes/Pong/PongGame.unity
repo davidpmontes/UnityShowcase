@@ -389,6 +389,7 @@ MonoBehaviour:
   readyStatePanel: {fileID: 1797682777}
   startButton: {fileID: 1924739670}
   countdownLabel: {fileID: 1353633911}
+  scoreText: {fileID: 1797956268}
 --- !u!114 &563486321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1ee89d25cf45d6952165a0d392525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 563486313}
 --- !u!33 &1200873748
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1192,6 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1ee89d25cf45d6952165a0d392525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 563486313}
 --- !u!33 &1581013667
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1381,7 +1384,7 @@ GameObject:
   - component: {fileID: 1797956271}
   - component: {fileID: 1797956270}
   m_Layer: 5
-  m_Name: Player1ScoreText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

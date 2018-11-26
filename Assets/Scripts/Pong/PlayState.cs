@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayState : GameBase {
 
@@ -19,6 +21,7 @@ public class PlayState : GameBase {
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-	    
-	}
+        cc.scoreText.GetComponent<Text>().text = string.Format("{0} : {1}", gc.P1score, gc.P2score);
+
+    }
 }

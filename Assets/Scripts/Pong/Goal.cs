@@ -10,6 +10,12 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.name == "ball")
         {
+            if (gameObject.name == "westGoal")
+                manager.GetComponent<GameController>().P2score++;
+            else if (gameObject.name == "eastGoal")
+                manager.GetComponent<GameController>().P1score++;
+
+
             manager.GetComponent<Animator>().SetTrigger("BallOut");
         }
     }
