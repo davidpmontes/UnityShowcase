@@ -8,4 +8,5 @@ public class CanvasController : MonoBehaviour
     public GameObject readyStatePanel;
     public GameObject startButton;
     public GameObject countdownLabel;
+    public GameObject scoreText;
 }

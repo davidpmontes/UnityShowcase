@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CountDownScript : StateMachineBehaviour
+public class CountDownScript : GameBase
 {
-    GameObject manager;
-    CanvasController cc;
-    GameController gc;
-
     private float countdown;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        manager = animator.gameObject;
-        cc = manager.GetComponent<CanvasController>();
-        gc = manager.GetComponent<GameController>();
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+
         countdown = 3.0f;
    	}
 
