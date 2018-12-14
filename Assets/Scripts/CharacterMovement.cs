@@ -10,39 +10,55 @@ public class CharacterMovement : MonoBehaviour
 
     private Vector3 moveDirection;
     private CharacterController cc;
-    private InputController ic;
-    private IAimController iac;
+    private IMovement movement;
+    private IAim aim;
+    private IAction action;
+    private IAimAction aimAction;
 
     void Start()
     {
         moveDirection = Vector3.zero;
         cc = GetComponent<CharacterController>();
-        ic = new PCController();
-        iac = new Mouse();
+        movement = new KeyboardController();
+        aim = new MouseController();
+        action = new KeyboardController();
+        aimAction = new MouseController();
     }
 
     void Update()
     {
         UpdateMovement();
         UpdateAim();
+        UpdateAction();
+        UpdateAimAction();
+    }
+
+    private void UpdateAimAction()
+    {
+
+    }
+
+    private void UpdateAction()
+    {
+
     }
 
     private void UpdateAim()
     {
-        transform.Rotate(0, iac.Horizontal() * aimHorizontalSpeed, 0);
+        transform.Rotate(0, aim.Horizontal() * aimHorizontalSpeed, 0);
     }
 
     private void UpdateMovement()
     {
-        moveDirection.x = ic.Horizontal() * movementSpeed;
-        moveDirection.z = ic.Vertical() * movementSpeed;
+        moveDirection.x = movement.Horizontal() * movementSpeed;
+        moveDirection.z = movement.Vertical() * movementSpeed;
         moveDirection = transform.TransformDirection(moveDirection);
 
         if (cc.isGrounded)
         {
             moveDirection.y = 0;
 
-            if (ic.Jump())
+            if (movement.Jump())
             {
                 moveDirection.y = jumpSpeed;
             }
