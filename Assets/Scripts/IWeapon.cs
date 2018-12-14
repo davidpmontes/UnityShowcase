@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IAimAction
+public interface IWeapon
 {
-    bool Action1();
-    bool Action2();
+    void First();
+    void Second();
 }

@@ -2,14 +2,14 @@
 
 public class MouseController : IAim, IAimAction
 {
-    public bool AimAction1()
+    public bool Action1()
     {
-        return Input.GetMouseButton(1);
+        return Input.GetMouseButton(0);
     }
 
-    public bool AimAction2()
+    public bool Action2()
     {
-        return Input.GetMouseButton(2);
+        return Input.GetMouseButton(1);
     }
 
     public float Horizontal()

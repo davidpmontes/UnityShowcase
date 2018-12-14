@@ -12,8 +12,6 @@ public class CharacterMovement : MonoBehaviour
     private CharacterController cc;
     private IMovement movement;
     private IAim aim;
-    private IAction action;
-    private IAimAction aimAction;
 
     void Start()
     {
@@ -21,25 +19,13 @@ public class CharacterMovement : MonoBehaviour
         cc = GetComponent<CharacterController>();
         movement = new KeyboardController();
         aim = new MouseController();
-        action = new KeyboardController();
-        aimAction = new MouseController();
+
     }
 
     void Update()
     {
         UpdateMovement();
         UpdateAim();
-        UpdateAction();
-        UpdateAimAction();
-    }
-
-    private void UpdateAimAction()
-    {
-
-    }
-
-    private void UpdateAction()
-    {
 
     }
 
