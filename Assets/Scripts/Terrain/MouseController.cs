@@ -14,11 +14,13 @@ public class MouseController : IAim, IAimAction
 
     public float Horizontal()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         return Input.GetAxis("Mouse X");
     }
 
     public float Vertical()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         return Input.GetAxis("Mouse Y");
     }
 }

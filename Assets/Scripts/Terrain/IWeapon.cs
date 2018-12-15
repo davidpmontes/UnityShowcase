@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IWeapon
 {
-    void First();
-    void Second();
+    void FireFirst();
+    void FireSecond();
 }

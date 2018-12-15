@@ -19,14 +19,12 @@ public class CharacterMovement : MonoBehaviour
         cc = GetComponent<CharacterController>();
         movement = new KeyboardController();
         aim = new MouseController();
-
     }
 
     void Update()
     {
         UpdateMovement();
         UpdateAim();
-
     }
 
     private void UpdateAim()

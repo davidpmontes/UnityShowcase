@@ -8,12 +8,14 @@ public class CharacterAction : MonoBehaviour
     private IAimAction aimAction;
     private CharacterInventory inventory;
 
+    public GameObject blaster;
+
     void Start()
     {
         action = new KeyboardController();
         aimAction = new MouseController();
         inventory = new CharacterInventory();
-        inventory.Slot1 = new Blaster();
+        inventory.Slot1 = blaster.GetComponent<Blaster>();
     }
 
     void Update()
@@ -28,15 +30,7 @@ public class CharacterAction : MonoBehaviour
         {
             if (inventory.Slot1 != null)
             {
-                inventory.Slot1.First();
-            }
-        }
-
-        if (aimAction.Action2())
-        {
-            if (inventory.Slot1 != null)
-            {
-                inventory.Slot1.Second();
+                inventory.Slot1.FireFirst();
             }
         }
     }
