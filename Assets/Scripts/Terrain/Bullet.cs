@@ -3,6 +3,9 @@
 public class Bullet : MonoBehaviour
 {
     public int speed;
+    public float lifespan;
+
+    private float deathTime;
     private Rigidbody rb;
 
     void Awake()
@@ -10,8 +13,18 @@ public class Bullet : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    public void Fire(Vector3 barrelForward)
+    private void Update()
     {
-        rb.velocity = barrelForward * speed;
+        if (Time.time > deathTime)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void Fire(Transform t)
+    {
+        deathTime = Time.time + lifespan;
+        transform.position = t.position;
+        rb.velocity = t.forward * speed;
     }
 }

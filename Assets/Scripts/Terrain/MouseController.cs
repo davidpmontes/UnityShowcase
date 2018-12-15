@@ -2,6 +2,11 @@
 
 public class MouseController : IAim, IAimAction
 {
+    public MouseController()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public bool Action1()
     {
         return Input.GetMouseButton(0);
@@ -14,13 +19,11 @@ public class MouseController : IAim, IAimAction
 
     public float Horizontal()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         return Input.GetAxis("Mouse X");
     }
 
     public float Vertical()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         return Input.GetAxis("Mouse Y");
     }
 }
